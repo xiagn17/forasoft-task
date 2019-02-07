@@ -188,7 +188,6 @@ class Video extends Component {
 
             // Tries to add a candidate when he is ready
             socket.on('candidate-receiver', (candidate, socketPeerID, peerID) => {
-                console.dir(outPeerConnections);
                 outPeerConnections[peerID].peerConnection.addIceCandidate(candidate)
                     .catch(() => console.log('Error addIceCandidate, peerID: ', peerID));
             });

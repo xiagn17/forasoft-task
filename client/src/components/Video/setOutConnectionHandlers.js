@@ -17,7 +17,7 @@ export default function (socket, { peerConnection, id }, isEnd) {
         })
             .then((offer) => {
                 // Sets SDP for the first time
-                peerConnection.setLocalDescription(offer).then(()=>console.log('local'));
+                peerConnection.setLocalDescription(offer);
 
                 // If this is the last peer that have to offer
                 if (isEnd) {
