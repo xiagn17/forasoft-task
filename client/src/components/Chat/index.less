@@ -1,0 +1,36 @@
+@import '../../less/mixins';
+
+.Room-chat {
+  border: 4px solid @clr;
+  height: 80vh;
+  position: relative;
+
+  &-messages {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    padding: 15px 10px;
+  }
+
+  &-input {
+    border-top: 1px solid @clr;
+    height: 60px;
+
+    input, button {
+      height: calc(100% + 1px);
+      position: relative;
+      top: -1px
+    }
+
+    input {
+      width: 85%;
+      padding: 0 15px;
+      top: -3px
+    }
+
+    button {
+      width: 15%;
+      border-left: 1px solid @clr;
+      font-size: 24px;
+    }
+  }
+}

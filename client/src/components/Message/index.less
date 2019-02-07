@@ -1,0 +1,29 @@
+@import '../../less/mixins';
+
+
+.msg {
+  .flex;
+  align-items: flex-start;
+  background: transparent;
+  margin-bottom: 7px;
+
+  &-header {
+    color: @clr;
+    background: transparent;
+  }
+
+  &-mainText {
+    word-wrap: break-word;
+    background: @clr;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: white;
+    max-width: 60%;
+  }
+
+  &.my-msg {
+     align-items: flex-end;
+   }
+}
+
+

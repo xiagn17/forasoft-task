@@ -1,0 +1,48 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.video video {
+  margin-bottom: 20px;
+  max-width: 100%;
+  background: black;
+  width: 300px;
+}
+.video button {
+  margin-bottom: 20px;
+  border: 1px solid #2a2b37;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.video i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: alwaysRotate;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.video .video-stream {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.video .streamer-name {
+  margin: auto;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a2b37;
+}
+@keyframes alwaysRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=index.css.map */

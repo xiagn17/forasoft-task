@@ -1,0 +1,15 @@
+.Room-header {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 900;
+}
+.Room-header .span-online {
+  text-decoration: underline;
+  color: darkcyan;
+  cursor: pointer;
+}
+.Room-header .span-online:hover {
+  color: cadetblue;
+}
+/*# sourceMappingURL=index.less.map */

@@ -1,0 +1,57 @@
+@import "../../less/mixins";
+@listHeight: 400px;
+
+.onlineList {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: cadetblue;
+  color: @clr;
+  padding: 40px 80px;
+  z-index: 1;
+  border-radius: 4px;
+  animation: fadeInDown 0.5s forwards;
+  box-shadow: 1px 1px 25px 1px @clr;
+
+  header {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  main {
+    height: @listHeight;
+    min-width: 250px;
+    margin: 15px 0;
+    overflow-y: auto;
+
+    ul li {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+  }
+
+  button {
+    border: 1.3px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    float: right;
+
+    &:hover {
+      border: 1.3px solid honeydew;
+      color: honeydew;
+      transition: 0.2s;
+    }
+  }
+}
+
+
+@keyframes fadeInDown {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

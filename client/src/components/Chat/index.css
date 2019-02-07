@@ -1,0 +1,31 @@
+.Room-chat {
+  border: 4px solid #2a2b37;
+  height: 80vh;
+  position: relative;
+}
+.Room-chat-messages {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  padding: 15px 10px;
+}
+.Room-chat-input {
+  border-top: 1px solid #2a2b37;
+  height: 60px;
+}
+.Room-chat-input input,
+.Room-chat-input button {
+  height: calc(100% + 1px);
+  position: relative;
+  top: -1px;
+}
+.Room-chat-input input {
+  width: 85%;
+  padding: 0 15px;
+  top: -3px;
+}
+.Room-chat-input button {
+  width: 15%;
+  border-left: 1px solid #2a2b37;
+  font-size: 24px;
+}
+/*# sourceMappingURL=index.css.map */

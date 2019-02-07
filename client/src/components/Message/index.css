@@ -1,0 +1,25 @@
+.msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  background: transparent;
+  margin-bottom: 7px;
+}
+.msg-header {
+  color: #2a2b37;
+  background: transparent;
+}
+.msg-mainText {
+  word-wrap: break-word;
+  background: #2a2b37;
+  padding: 5px 15px;
+  border-radius: 15px;
+  color: white;
+  max-width: 60%;
+}
+.msg.my-msg {
+  align-items: flex-end;
+}
+/*# sourceMappingURL=index.css.map */

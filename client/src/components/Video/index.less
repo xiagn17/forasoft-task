@@ -1,0 +1,54 @@
+@import "../../less/mixins";
+
+@margin: 20px;
+
+.video {
+  .flex;
+  margin-top: @margin;
+
+  video {
+    margin-bottom: @margin;
+    max-width: 100%;
+    background: black;
+    width: 300px;
+  }
+
+  button {
+    margin-bottom: @margin;
+    border: 1px solid @clr;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+
+  i {
+    font-size: 48px;
+    margin-bottom: @margin;
+    animation: alwaysRotate;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  .video-stream {
+    .flex
+  }
+  .streamer-name {
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: @clr;
+  }
+}
+
+
+@keyframes alwaysRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+

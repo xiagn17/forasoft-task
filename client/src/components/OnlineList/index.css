@@ -1,0 +1,47 @@
+.onlineList {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: cadetblue;
+  color: #2a2b37;
+  padding: 40px 80px;
+  z-index: 1;
+  border-radius: 4px;
+  animation: fadeInDown 0.5s forwards;
+  box-shadow: 1px 1px 25px 1px #2a2b37;
+}
+.onlineList header {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+.onlineList main {
+  height: 400px;
+  min-width: 250px;
+  margin: 15px 0;
+  overflow-y: auto;
+}
+.onlineList main ul li {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.onlineList button {
+  border: 1.3px solid black;
+  border-radius: 20px;
+  padding: 5px 10px;
+  float: right;
+}
+.onlineList button:hover {
+  border: 1.3px solid honeydew;
+  color: honeydew;
+  transition: 0.2s;
+}
+@keyframes fadeInDown {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+/*# sourceMappingURL=index.css.map */
