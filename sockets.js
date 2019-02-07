@@ -104,9 +104,7 @@ module.exports = (io) => {
                     socket.to(roomID).emit('close-video');
                 });
                 // If someone comes to room and stream is going - block him ability to start a new one
-                if (offers.length > 0) {
-                    io.sockets.connected[socket.id].emit('already-streaming', socket.id)
-                }
+                io.sockets.connected[socket.id].emit('already-streaming', offers.length);
 
 
                 // If user has been invited, adds him into the room (and remember his name)
@@ -116,6 +114,8 @@ module.exports = (io) => {
                     roomsAdmin.addUser(roomID, name, socket.id);
                     sendUpdatedUsers(io, roomID);
 
+                    // If someone started streaming before user entered the name
+                    io.sockets.connected[socket.id].emit('already-streaming', offers.length);
 
                     // Handles disconnection of invited user
                     socket.on('disconnect', () => {

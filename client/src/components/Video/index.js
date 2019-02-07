@@ -97,10 +97,11 @@ class Video extends Component {
     componentDidMount () {
         const { socket } = this.props;
 
-        socket.on('already-streaming', () => {
-            this.setState({
-                showStream: true
-            })
+        socket.on('already-streaming', (length) => {
+            let obj;
+            length ? obj = {showStream: true, nameSource: '*anonymous*'}
+                    : obj = { showStream: false, nameSource: null };
+            this.setState(obj);
         });
 
         socket.on('sdp-creator-offer', (offer, nameSource) => {
